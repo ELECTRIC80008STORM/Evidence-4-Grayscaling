@@ -10,3 +10,29 @@ Nowadays, grayscaling is used for many different purposes, some of which are lis
 - **Artistic and Aesthetic Reasons**: Grayscaling can be used for artistic purposes because it often looks aesthetically pleasing.
 
 I chose this problem to understand the roots of modern grayscaling and to apply my knowledge of functional programming in a tangible way.
+
+
+## Models
+
+*The diagram will be added in a future*
+
+
+## Implementation
+
+The solution was implemented in Python 3 with the help of four Python modules, two of which are OpenCV and NumPy. These modules need to be installed before running the code.
+
+**OpenCV**: This module is used to read, display, and save the images the app handles.
+- It can be installed in Ubuntu with the following command:
+  ```bash
+  $ sudo apt-get install python3-opencv
+  ```
+- Here is a guide to install it on other operating systems: [Guide](https://docs.opencv.org/4.x/da/df6/tutorial_py_table_of_contents_setup.html)
+
+**NumPy**: This module is used to create the array where the modified image data is stored.
+- It can be installed in Ubuntu with the following command:
+  ```bash
+  $ sudo apt install python3-numpy
+  ```
+- Here is a guide to install it on other operating systems: [Guide](https://numpy.org/install/)
+
+Once these modules are installed, you can use the grayscaling app (through the `grayscaling.py` file) with the provided examples or add your own as the app explains.
