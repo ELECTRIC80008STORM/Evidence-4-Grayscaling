@@ -36,3 +36,8 @@ The solution was implemented in Python 3 with the help of four Python modules, t
 - Here is a guide to install it on other operating systems: [Guide](https://numpy.org/install/)
 
 Once these modules are installed, you can use the grayscaling app (through the `grayscaling.py` file) with the provided examples or add your own as the app explains.
+
+
+## Tests
+
+The `tests.py` file contains all of the test cases.
