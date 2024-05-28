@@ -14,7 +14,24 @@ I chose this problem to understand the roots of modern grayscaling and to apply 
 
 ## Models
 
-*The diagram will be added in a future*
+To apply grayscaling, it is important to first understand how image data is usually stored.
+
+### Color Images
+
+In the case of color images, the channel values of each pixel are stored in a three-dimensional array. These channel values represent the intensity of the colors (typically Red, Green, and Blue) for each pixel. For example, a pixel might have the values `[255, 0, 0]`, which would display as bright red.
+
+### Grayscale Images
+
+For grayscale images, there is no need to store separate channel values for colors. Instead, the intensity (or luminosity) of each pixel is stored in a two-dimensional array. This single value represents the brightness of the pixel, ranging from black to white.
+
+### Conversion Process
+
+To convert a color image to a grayscale image, we can apply a mathematical formula to each set of color channels that define the pixels. This is where the functional programming paradigm shines. By using a function like `map` which lets us apply a function for each item iterated, we can easily apply the formula to each pixel.
+This formula combines the red, green, and blue values into a single luminosity value. The formula I’m going to use is the next one:
+$\ \text{luminosity} = 0.299 \times R + 0.587 \times G + 0.114 \times B \$.
+By applying this formula to each pixel, we transform the three color values into a single luminosity value, resulting in the grayscale version of the image.
+
+More about the implementation is going to be shown in the next section.
 
 
 ## Implementation
