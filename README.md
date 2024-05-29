@@ -39,7 +39,7 @@ To understand this better, consider Figure 2, which illustrates the single chann
 ### Conversion Process
 
 To convert a color image to a grayscale image, we can apply a mathematical formula to each set of color channels that define the pixels. This is where the functional programming paradigm shines. By using a function like `map` which lets us apply a function for each item iterated, we can easily apply the formula to each pixel.
-This formula combines the red, green, and blue values into a single luminosity value. The formula I’m going to use is the next one:
+This formula combines the red, green, and blue values into a single luminosity value. The formula I’m going to use is the next one (_with the result being truncated to stored it as an integer_):
 $\ \text{luminosity} = 0.299 \times R + 0.587 \times G + 0.114 \times B \$.
 By applying this formula to each pixel, we transform the three color values into a single luminosity value, resulting in the grayscale version of the image.
 
@@ -48,10 +48,10 @@ As an example we can consider the first and last pixel in _Figure 1_. Which woul
 Here is the example of how the function applied to each pixel would help us obtained the luminosity values:
 
 **Pixel A:**
-$\ 0.299 \times 244 + 0.587 \times 3 + 0.114 \times 5 = 75.287 \$
+$\ 0.299 \times 244 + 0.587 \times 3 + 0.114 \times 5 = 75.287 \rightarrow 75 \$
 
 **Pixel B:**
-$\ 0.299 \times 0 + 0.587 \times 53 + 0.114 \times 72 = 39.319 \$
+$\ 0.299 \times 0 + 0.587 \times 53 + 0.114 \times 72 = 39.319 \rightarrow 39 \$
 
 Now, applying this to each pixel would help us transform the original image matrix into the grayscale two dimensional matrix with the correct values.
 
