@@ -82,3 +82,88 @@ Once these modules are installed, you can use the grayscaling app (through the `
 ## Tests
 
 The `tests.py` file contains all of the test cases.
+
+
+## Analysis
+
+As I explained before, I used a functional paradigm to perform the grayscaling operations on the image pixels. However, due to the large number of pixels some images have, the process isn’t as efficient as it could be. Using a parallel paradigm alongside the functional one would allow the computer to split the operations and distribute the workload, resulting in a more efficient process. The only downside would be a slight increase in the complexity of the code.
+
+### Procedural / Imperative Paradigm
+
+The problem could have been solved by using this paradigm. In it, you directly define the steps the computer needs to follow to achieve the desired result. Using this approach, the implementation of the mathematical formula for grayscaling could be done with iterations using loops. While focusing solely on grayscaling, there wouldn't be much difference between this and the functional paradigm. However, the functional paradigm offers the advantage of modularity. To change the filter or operations applied to the image, you would only need to create and use a new function with the desired filter. This approach avoids modifying existing code and allows multiple functions to be used as needed, providing greater flexibility and reusability compared to having a single piece of code modified for each specific filter.
+
+An example of the implementation with this paradigm is shown below:
+
+```python
+def grayscaling(imageData):
+    height, width = imageData.shape[:2]
+    grayscaleImage = [[0 for x in range(width)] for x in range(height)]
+    for i in range(height):
+        for j in range(width):
+            b, g, r = imageData[i, j]  # Access the pixel and unpack it
+            grayscaleValue = int(0.299 * r + 0.587 * g + 0.114 * b)
+            grayscaleImage[i, j] = grayscaleValue
+    return np.array(grayscaleImage, dtype=np.uint8)
+```
+
+### Time Complexity
+
+Most of the functions in my code are aimed at enhancing the user experience rather than directly performing the grayscaling. However, it is essential to analyze the time complexity of all functions to determine the general time complexity of the application.
+
+- **luminosityCalculation(pixel)**: This function applies the luminosity formula to the three channels inside the pixel it receives and returns the value. The number of channels never increases nor do the channel values go above 255. Therefore, its time complexity is the same for all cases:
+  - **Time Complexity:**
+    - Ω(1)
+    - Θ(1)
+    - O(1)
+
+- **grayscaling(imageData)**: This function performs four operations:
+  1. Extracts dimensions: Accessing an attribute of the array, which is _O(1)_.
+  2. Creates the grayscale array: Using list comprehension, it has a time complexity of _O(nm)_, where n and m are the height and width.
+  3. Applies the luminosity function: Using the previously explained function on every pixel, it has a complexity of _O(nm)_.
+  4. Converts the array to a NumPy array: This operation also has a complexity of _O(nm)_, depending on the size of the array being copied.
+  - **Time Complexity:**
+    - Ω(nm)
+    - Θ(nm)
+    - O(nm)
+
+- **clearConsole()**: This function only clears the console screen, as it was probably expected.
+  - **Time Complexity:**
+    - Ω(1)
+    - Θ(1)
+    - O(1)
+
+- **checkUserInput(quantityOfOptions)**: This function checks the user input and ensures it is acceptable by trapping the user in a while loop until the input is considered valid.
+  - **Time Complexity:**
+    - Ω(1): In the best case, where the user enters a valid number immediately.
+    - Θ(n): In the average case, where the user enters an invalid number.
+    - O(n): In the worst case, where the user enters several invalid numbers.
+
+- **menu()**: This function displays the menu for the user and lists the available options. The number of operations depends on the number of example images, _n_.
+  - **Time Complexity:**
+    - Ω(n)
+    - Θ(n)
+    - O(n)
+
+- **resizeImage(image, maxWidth, maxHeight)**: This function resizes the image while maintaining the aspect ratio, ensuring it fits within most users’ screens. It performs the following steps:
+  1. Extracts dimensions: As mentioned before, it has a complexity of _O(1)_.
+  2. Calculates the scaling factor: Done through a simple operation, it has a complexity of _O(1)_.
+  3. Resizes the image: Using OpenCV's `resize` function, it has a complexity of _O(nm)_.
+  - **Time Complexity:**
+    - Ω(nm)
+    - Θ(nm)
+    - O(nm)
+
+- **isGrayscale(image)**: This function determines if the image is already grayscaled by checking the dimensions of the image array or if all channels in the first pixel have the same value.
+  - **Time Complexity:**
+    - Ω(1)
+    - Θ(1)
+    - O(1)
+
+- **main()**: This function contains the core functionality, including the menu. It allows the user to choose between using an example image or an image added to the folder. Depending on the scenario, it either creates a new grayscale image or displays the existing one. The worst time complexities of the functions and methods used here are given by the image dimensions.
+  - **Time Complexity:**
+    - Ω(nm)
+    - Θ(nm)
+    - O(nm)
+
+With this, we obtained that the general complexity for our app, in any case, is going to be of _Θ(nm)_, where _n_ and _m_ are the length of the dimensions of the image array.
+
