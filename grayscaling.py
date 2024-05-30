@@ -160,7 +160,7 @@ def resizeImage(image, maxWidth, maxHeight):
     
     return image
 
-# It assumes that if it has three channles and the first pixel is grayscaled, they all are
+# It assumes that if it has three channels and the first pixel is grayscaled, they all are
 def isGrayscale(image):
     """
     Check if an image is already grayscaled.
