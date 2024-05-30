@@ -167,3 +167,31 @@ Most of the functions in my code are aimed at enhancing the user experience rath
 
 With this, we obtained that the general complexity for our app, in any case, is going to be of _Θ(nm)_, where _n_ and _m_ are the length of the dimensions of the image array.
 
+
+## References
+
+1. Tech with Julles. (2023, April 9). *NumPy Arrays: Array Shape and Dimensions*. Medium. Retrieved from [https://medium.com/@techwithjulles/numpy-arrays-array-shape-and-dimensions-879b7592cf44](https://medium.com/@techwithjulles/numpy-arrays-array-shape-and-dimensions-879b7592cf44)
+
+2. GeeksforGeeks. (2024, April 21). *Introduction of Programming Paradigms*. Retrieved May 29, 2024, from [https://www.geeksforgeeks.org/introduction-of-programming-paradigms/](https://www.geeksforgeeks.org/introduction-of-programming-paradigms/)
+
+3. Bharmal, M. J. (2023, November 3). *Gray Scaling with the Algorithms*. Medium. Retrieved from [https://medium.com/@mjbharmal2002/gray-scaling-with-the-algorithms-b83f87975885](https://medium.com/@mjbharmal2002/gray-scaling-with-the-algorithms-b83f87975885)
+
+4. Korlakunta, S. (2023, January 24). *Gray Scale and Color Images Using OpenCV*. Medium. Retrieved from [https://korlakuntasaikamal10.medium.com/gray-scale-and-color-images-using-opencv-eda0c13c292a](https://korlakuntasaikamal10.medium.com/gray-scale-and-color-images-using-opencv-eda0c13c292a)
+
+5. Subramanian, S. (2023, October 16). *Gray Scaling*. LinkedIn. Retrieved from [https://www.linkedin.com/pulse/gray-scaling-shreenath-subramanian](https://www.linkedin.com/pulse/gray-scaling-shreenath-subramanian)
+
+6. OpenCV Documentation. (n.d.). *Setup OpenCV-Python in Windows*. Retrieved from [https://docs.opencv.org/4.x/da/df6/tutorial_py_table_of_contents_setup.html](https://docs.opencv.org/4.x/da/df6/tutorial_py_table_of_contents_setup.html)
+
+7. OpenCV Documentation. (n.d.). *Display Image*. Retrieved May from [https://docs.opencv.org/4.x/db/deb/tutorial_display_image.html](https://docs.opencv.org/4.x/db/deb/tutorial_display_image.html)
+
+8. OpenCV Documentation. (n.d.). *Basic Operations on Images*. Retrieved from [https://docs.opencv.org/4.x/d3/df2/tutorial_py_basic_ops.html](https://docs.opencv.org/4.x/d3/df2/tutorial_py_basic_ops.html)
+
+9. OpenCV Documentation. (n.d.). *Color Conversion*. Retrieved from [https://docs.opencv.org/4.x/dc/d38/group__gapi__colorconvert.html#ga3e8fd8197ab16811caf9b31cb1e08a05](https://docs.opencv.org/4.x/dc/d38/group__gapi__colorconvert.html#ga3e8fd8197ab16811caf9b31cb1e08a05)
+
+10. LinuxConfig.org. (2020, April 22). *Install NumPy on Ubuntu 20.04 Focal Fossa Linux*. Retrieved from [https://linuxconfig.org/install-numpy-on-ubuntu-20-04-focal-fossa-linux](https://linuxconfig.org/install-numpy-on-ubuntu-20-04-focal-fossa-linux)
+
+11. NumPy Documentation. (n.d.). *Install NumPy*. Retrieved from [https://numpy.org/install/](https://numpy.org/install/)
+
+12. GeeksforGeeks. (2023, December 4). *Python map() Function*. Retrieved from [https://www.geeksforgeeks.org/python-map-function/](https://www.geeksforgeeks.org/python-map-function/)
+
+13. Stack Overflow. (2008). *How can I clear the interpreter console?*. Retrieved from [https://stackoverflow.com/questions/517970/how-can-i-clear-the-interpreter-console](https://stackoverflow.com/questions/517970/how-can-i-clear-the-interpreter-console)
