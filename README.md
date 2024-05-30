@@ -195,3 +195,9 @@ With this, we obtained that the general complexity for our app, in any case, is 
 12. GeeksforGeeks. (2023, December 4). *Python map() Function*. Retrieved from [https://www.geeksforgeeks.org/python-map-function/](https://www.geeksforgeeks.org/python-map-function/)
 
 13. Stack Overflow. (2008). *How can I clear the interpreter console?*. Retrieved from [https://stackoverflow.com/questions/517970/how-can-i-clear-the-interpreter-console](https://stackoverflow.com/questions/517970/how-can-i-clear-the-interpreter-console)
+
+14. LearnOpenCV. (n.d.). *Image Resizing with OpenCV*. Retrieved from [https://learnopencv.com/image-resizing-with-opencv/](https://learnopencv.com/image-resizing-with-opencv/)
+
+15. GeeksforGeeks. (2023, January 16). *Image Resizing using OpenCV | Python*. Retrieved from [https://www.geeksforgeeks.org/image-resizing-using-opencv-python/](https://www.geeksforgeeks.org/image-resizing-using-opencv-python/)
+
+16. GeeksforGeeks. (2023, September 4). *enumerate() in Python*. Retrieved from [https://www.geeksforgeeks.org/enumerate-in-python/](https://www.geeksforgeeks.org/enumerate-in-python/)
